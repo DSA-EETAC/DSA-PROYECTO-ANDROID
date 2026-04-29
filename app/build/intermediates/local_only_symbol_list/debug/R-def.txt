@@ -1,0 +1,33 @@
+R_DEF: Internal format may change without notice
+local
+color dungeon_bg
+color dungeon_border
+color dungeon_card
+color dungeon_gold
+color dungeon_gold_btn
+color dungeon_gold_dark
+color dungeon_input
+color dungeon_red
+color dungeon_text_hint
+color dungeon_text_label
+color dungeon_text_light
+color dungeon_text_link
+color white
+drawable bg_btn_gold
+drawable bg_btn_red
+drawable bg_card_dungeon
+drawable bg_input_dungeon
+id btnLogin
+id btnLogout
+id btnRegister
+id etConfirmPassword
+id etEmail
+id etPassword
+id etUsername
+id tvGoToLogin
+id tvGoToRegister
+id tvWelcome
+layout activity_login
+layout activity_main
+layout activity_register
+style Theme.DungeonRun

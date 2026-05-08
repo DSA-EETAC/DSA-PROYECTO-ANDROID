@@ -8,6 +8,8 @@
         android:minSdkVersion="24"
         android:targetSdkVersion="34" />
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <permission
         android:name="com.eetac.proyecto_dsa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -22,7 +24,8 @@
         android:label="Dungeon Run"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.DungeonRun" >
+        android:theme="@style/Theme.DungeonRun"
+        android:usesCleartextTraffic="true" >
         <activity
             android:name="com.eetac.proyecto_dsa.LoginActivity"
             android:exported="true" >
@@ -37,6 +40,12 @@
             android:exported="false" />
         <activity
             android:name="com.eetac.proyecto_dsa.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eetac.proyecto_dsa.TiendaActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.eetac.proyecto_dsa.MochilaActivity"
             android:exported="false" />
 
         <provider

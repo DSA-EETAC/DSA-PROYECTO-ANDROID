@@ -21,9 +21,19 @@ public class MainActivity extends AppCompatActivity {
         userManager = new LocalUserManager(this);
 
         tvWelcome = findViewById(R.id.tvWelcome);
+        Button btnTienda = findViewById(R.id.btnTienda);
+        Button btnMochila = findViewById(R.id.btnMochila);
         btnLogout = findViewById(R.id.btnLogout);
 
         tvWelcome.setText("¡Bienvenido, " + userManager.getLoggedUsername() + "!");
+
+        btnTienda.setOnClickListener(v -> {
+            startActivity(new Intent(this, TiendaActivity.class));
+        });
+
+        btnMochila.setOnClickListener(v -> {
+            startActivity(new Intent(this, MochilaActivity.class));
+        });
 
         btnLogout.setOnClickListener(v -> {
             userManager.logout();

@@ -1,30 +1,42 @@
 [
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/drawable_bg_btn_gold.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/drawable/bg_btn_gold.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_login.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/drawable_bg_card_dungeon.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/drawable/bg_card_dungeon.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\drawable_bg_input_dungeon.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_input_dungeon.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_main.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_main.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/drawable_bg_input_dungeon.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/drawable/bg_input_dungeon.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_mochila.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_mochila.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_login.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_login.xml"
+        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_tienda.xml.flat",
+        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_tienda.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_register.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_register.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_register.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_register.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/drawable_bg_btn_red.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/drawable/bg_btn_red.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\drawable_bg_btn_red.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_btn_red.xml"
+    },
+    {
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\drawable_bg_card_dungeon.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_card_dungeon.xml"
+    },
+    {
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\drawable_bg_btn_gold.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_btn_gold.xml"
+    },
+    {
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_tienda.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_tienda.xml"
     }
 ]

@@ -37,6 +37,32 @@
         android:layout_marginBottom="48dp"/>
 
     <Button
+        android:id="@+id/btnTienda"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_gold"
+        android:text="Ir a la Tienda"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnMochila"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_gold"
+        android:text="Ver Mochila"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="48dp"

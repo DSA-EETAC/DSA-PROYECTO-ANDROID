@@ -63,6 +63,19 @@
         android:layout_marginBottom="16dp"/>
 
     <Button
+        android:id="@+id/btnJugar"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_gold"
+        android:text="Jugar"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:fontFamily="serif"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="48dp"

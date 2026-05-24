@@ -7,8 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    // ⚠️ CAMBIAR POR LA IP DEL SERVIDOR CUANDO ESTÉ LISTO
-    private static final String BASE_URL = "http://10.4.120.11:8080/api/";
+    private static final String BASE_URL = "https://dsa2.upc.edu/api/";
 
     private static Retrofit retrofit = null;
 

@@ -52,121 +52,25 @@
             android:fontFamily="serif" />
     </LinearLayout>
 
-    <!-- Tarjeta de Botas -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardBota"
+    <!-- Contenedor dinámico de objetos -->
+    <ScrollView
+        android:id="@+id/scrollViewTienda"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        app:cardBackgroundColor="@color/dungeon_card"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
-        app:layout_constraintTop_toBottomOf="@id/layoutMonedas"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tvNombreBota"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Botas Ligeras"
-                android:textColor="@color/dungeon_text_light"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/tvPrecioBota"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Precio: 150 monedas"
-                android:textColor="@color/dungeon_text_label"
-                android:textSize="14sp"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toBottomOf="@id/tvNombreBota"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="4dp" />
-
-            <Button
-                android:id="@+id/btnComprarBota"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="COMPRAR"
-                android:textColor="@color/dungeon_text_light"
-                android:textSize="12sp"
-                android:backgroundTint="@color/dungeon_gold_btn"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <!-- Tarjeta de Espada -->
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardEspada"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        app:cardBackgroundColor="@color/dungeon_card"
-        app:cardCornerRadius="12dp"
-        app:cardElevation="8dp"
-        app:layout_constraintTop_toBottomOf="@id/cardBota"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Lista de objetos disponibles en la tienda"
+        app:layout_constraintTop_toBottomOf="@id/layoutMonedas"
+        app:layout_constraintBottom_toTopOf="@id/tvAviso"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
+            android:id="@+id/containerObjetos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="16dp">
-
-            <TextView
-                android:id="@+id/tvNombreEspada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Espada de Acero"
-                android:textColor="@color/dungeon_text_light"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <TextView
-                android:id="@+id/tvPrecioEspada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Precio: 300 monedas"
-                android:textColor="@color/dungeon_text_label"
-                android:textSize="14sp"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toBottomOf="@id/tvNombreEspada"
-                app:layout_constraintStart_toStartOf="parent"
-                android:layout_marginTop="4dp" />
-
-            <Button
-                android:id="@+id/btnComprarEspada"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="COMPRAR"
-                android:textColor="@color/dungeon_text_light"
-                android:textSize="12sp"
-                android:backgroundTint="@color/dungeon_gold_btn"
-                android:fontFamily="serif"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
+            android:orientation="vertical" />
+    </ScrollView>
 
     <TextView
         android:id="@+id/tvAviso"

@@ -18,7 +18,7 @@ import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText etEmail, etPassword;
+    private EditText etUsername, etPassword;
     private Button btnLogin;
     private TextView tvGoToRegister;
     private LocalUserManager userManager;
@@ -35,13 +35,13 @@ public class LoginActivity extends AppCompatActivity {
             return;
         }
 
-        etEmail        = findViewById(R.id.etEmail);
+        etUsername     = findViewById(R.id.etUsername);
         etPassword     = findViewById(R.id.etPassword);
         btnLogin       = findViewById(R.id.btnLogin);
         tvGoToRegister = findViewById(R.id.tvGoToRegister);
 
         btnLogin.setOnClickListener(v -> {
-            String nombre   = etEmail.getText().toString().trim();
+            String nombre   = etUsername.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
             if (nombre.isEmpty() || password.isEmpty()) {
@@ -56,9 +56,13 @@ public class LoginActivity extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<User> call, Response<User> response) {
                     if (response.isSuccessful() && response.body() != null) {
-                        userManager.saveSession(response.body().getNombre());
+                        User user = response.body();
+                        // Guardamos la sesión y actualizamos las monedas recibidas del servidor
+                        userManager.saveSession(user.getNombre());
+                        userManager.updateCoins(user.getMonedas());
+
                         Toast.makeText(LoginActivity.this,
-                                "¡Bienvenido, " + response.body().getNombre() + "!",
+                                "¡Bienvenido, " + user.getNombre() + "!",
                                 Toast.LENGTH_SHORT).show();
                         goToMain();
                     } else {

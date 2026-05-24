@@ -13,6 +13,9 @@ public class User {
     @SerializedName("mail")
     private String mail;
 
+    @SerializedName("monedas")
+    private int monedas;
+
     public User() {}
 
     public User(String nombre, String password, String mail) {
@@ -24,4 +27,6 @@ public class User {
     public String getNombre()   { return nombre; }
     public String getPassword() { return password; }
     public String getMail()     { return mail; }
+    public int getMonedas()     { return monedas; }
+    public void setMonedas(int monedas) { this.monedas = monedas; }
 }

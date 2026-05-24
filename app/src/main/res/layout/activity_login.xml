@@ -54,7 +54,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="⚔ AVENTURERO (EMAIL)"
+                android:text="⚔ AVENTURERO (USUARIO)"
                 android:textColor="@color/dungeon_text_label"
                 android:textSize="9sp"
                 android:letterSpacing="0.2"
@@ -62,17 +62,17 @@
                 android:layout_marginBottom="6dp"/>
 
             <EditText
-                android:id="@+id/etEmail"
+                android:id="@+id/etUsername"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:background="@drawable/bg_input_dungeon"
                 android:paddingStart="14dp"
                 android:paddingEnd="14dp"
-                android:hint="tu@email.com"
+                android:hint="Tu nombre de usuario"
                 android:textColor="@color/dungeon_text_light"
                 android:textSize="13sp"
                 android:fontFamily="serif"
-                android:inputType="textEmailAddress"
+                android:inputType="text"
                 android:layout_marginBottom="14dp"/>
 
             <TextView

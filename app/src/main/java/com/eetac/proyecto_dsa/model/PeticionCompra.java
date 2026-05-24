@@ -1,20 +1,26 @@
 package com.eetac.proyecto_dsa.model;
 
-import com.google.gson.annotations.SerializedName;
-
 public class PeticionCompra {
-
-    @SerializedName("nombreJugador")
     private String nombreJugador;
-
-    @SerializedName("nombreObjeto")
     private String nombreObjeto;
+    private int precio;
 
-    public PeticionCompra(String nombreJugador, String nombreObjeto) {
+    // Constructor vacío (OBLIGATORIO para que el JSON no explote)
+    public PeticionCompra() {}
+
+    public PeticionCompra(String nombreJugador, String nombreObjeto, int precio) {
         this.nombreJugador = nombreJugador;
-        this.nombreObjeto  = nombreObjeto;
+        this.nombreObjeto = nombreObjeto;
+        this.precio = precio;
     }
 
+    // Getters
     public String getNombreJugador() { return nombreJugador; }
-    public String getNombreObjeto()  { return nombreObjeto; }
+    public String getNombreObjeto() { return nombreObjeto; }
+    public int getPrecio() { return precio; }
+
+    // Setters
+    public void setNombreJugador(String nombreJugador) { this.nombreJugador = nombreJugador; }
+    public void setNombreObjeto(String nombreObjeto) { this.nombreObjeto = nombreObjeto; }
+    public void setPrecio(int precio) { this.precio = precio; }
 }

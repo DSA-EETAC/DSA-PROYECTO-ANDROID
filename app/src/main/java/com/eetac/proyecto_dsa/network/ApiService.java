@@ -1,18 +1,18 @@
 package com.eetac.proyecto_dsa.network;
 
+import com.eetac.proyecto_dsa.model.AiRequest;
 import com.eetac.proyecto_dsa.model.InventarioJugador;
-import com.eetac.proyecto_dsa.model.Item;
+import com.eetac.proyecto_dsa.model.Response;
 import com.eetac.proyecto_dsa.model.PeticionCompra;
 import com.eetac.proyecto_dsa.model.TiendaJuego;
 import com.eetac.proyecto_dsa.model.User;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 public interface ApiService {
 
@@ -35,4 +35,8 @@ public interface ApiService {
     // GET /api/juego/tienda
     @GET("juego/tienda")
     Call<TiendaJuego> getTienda();
+
+    // LLAMADA A LA IA
+    @POST
+    Call<Response> preguntarIA(@Url String url, @Body AiRequest request);
 }

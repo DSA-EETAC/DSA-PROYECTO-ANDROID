@@ -35,6 +35,8 @@
             android:name=".MochilaActivity"
             android:exported="false"/>
 
+        <activity android:name=".utils.GruposActivity" />
+
     </application>
 
 </manifest>

@@ -87,4 +87,10 @@
         android:paddingEnd="24dp"
         android:fontFamily="serif"/>
 
+    <Button
+        android:id="@+id/btnGrupos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver Equipos" />
+
 </LinearLayout>

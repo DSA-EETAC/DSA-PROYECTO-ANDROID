@@ -24,4 +24,8 @@ public class User {
     public String getNombre()   { return nombre; }
     public String getPassword() { return password; }
     public String getMail()     { return mail; }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }

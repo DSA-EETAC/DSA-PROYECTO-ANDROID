@@ -44,6 +44,7 @@ public class LoginActivity extends AppCompatActivity {
             String nombre   = etEmail.getText().toString().trim();
             String password = etPassword.getText().toString().trim();
 
+
             if (nombre.isEmpty() || password.isEmpty()) {
                 Toast.makeText(this, "⚠ Rellena todos los campos", Toast.LENGTH_SHORT).show();
                 return;
@@ -75,6 +76,7 @@ public class LoginActivity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             });
+
         });
 
         tvGoToRegister.setOnClickListener(v ->

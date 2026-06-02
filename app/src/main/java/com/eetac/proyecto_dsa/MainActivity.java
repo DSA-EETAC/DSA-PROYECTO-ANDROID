@@ -10,6 +10,8 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import com.eetac.proyecto_dsa.utils.LocalUserManager;
+import com.eetac.proyecto_dsa.utils.GruposActivity;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -42,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnTienda  = findViewById(R.id.btnTienda);
         Button btnMochila = findViewById(R.id.btnMochila);
         Button btnJugar   = findViewById(R.id.btnJugar);
+        Button btnGrupos  = findViewById(R.id.btnGrupos);
         btnLogout         = findViewById(R.id.btnLogout);
 
         tvWelcome.setText("¡Bienvenido, " + userManager.getLoggedUsername() + "!");
@@ -52,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnMochila.setOnClickListener(v ->
                 startActivity(new Intent(this, MochilaActivity.class))
+        );
+
+        btnGrupos.setOnClickListener(v ->
+                startActivity(new Intent(this, GruposActivity.class))
         );
 
         btnJugar.setOnClickListener(v -> {

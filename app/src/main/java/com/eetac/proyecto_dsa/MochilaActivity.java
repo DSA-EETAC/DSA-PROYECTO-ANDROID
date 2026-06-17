@@ -7,7 +7,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.eetac.proyecto_dsa.model.InventarioJugador;
-import com.eetac.proyecto_dsa.model.InventarioJugador;
 import com.eetac.proyecto_dsa.network.RetrofitClient;
 import com.eetac.proyecto_dsa.utils.LocalUserManager;
 

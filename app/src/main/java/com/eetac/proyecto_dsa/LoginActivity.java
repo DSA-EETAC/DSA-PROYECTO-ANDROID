@@ -50,12 +50,17 @@ public class LoginActivity extends AppCompatActivity {
                 return;
             }
 
-            // Llamada a la API con Retrofit
-            User credenciales = new User(nombre, password, null);
+            // Deshabilitar botón para evitar múltiples clics
+            btnLogin.setEnabled(false);
+
+            // Llamada a la API con Retrofit (enviamos 0 monedas por defecto al login)
+            User credenciales = new User(nombre, password, null, 0);
 
             RetrofitClient.getService().login(credenciales).enqueue(new Callback<User>() {
                 @Override
                 public void onResponse(Call<User> call, Response<User> response) {
+                    btnLogin.setEnabled(true);
+
                     if (response.isSuccessful() && response.body() != null) {
                         User user = response.body();
                         // Guardamos la sesión y actualizamos las monedas recibidas del servidor
@@ -75,8 +80,9 @@ public class LoginActivity extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<User> call, Throwable t) {
+                    btnLogin.setEnabled(true);
                     Toast.makeText(LoginActivity.this,
-                            "⚠ Sin conexión con el servidor",
+                            "⚠ Error de red: " + t.getMessage(),
                             Toast.LENGTH_SHORT).show();
                 }
             });

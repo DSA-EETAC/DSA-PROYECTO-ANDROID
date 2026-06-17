@@ -1,6 +1,9 @@
 package com.eetac.proyecto_dsa.network;
 
+import com.eetac.proyecto_dsa.model.Grupo;
+import com.eetac.proyecto_dsa.model.InventarioJugador;
 import com.eetac.proyecto_dsa.model.PeticionCompra;
+import com.eetac.proyecto_dsa.model.TiendaJuego;
 import com.eetac.proyecto_dsa.model.User;
 
 import java.util.List;
@@ -27,5 +30,17 @@ public interface ApiService {
 
     // GET /api/juego/inventario/{nombre}
     @GET("juego/inventario/{nombre}")
-    Call<List<String>> getInventario(@Path("nombre") String nombre);
+    Call<InventarioJugador> getInventario(@Path("nombre") String nombre);
+
+    // GET /api/juego/tienda
+    @GET("juego/tienda")
+    Call<TiendaJuego> getTienda();
+
+    // GET /api/juego/grupos
+    @GET("juego/grupos")
+    Call<List<Grupo>> getListaGrupos();
+
+    // POST /api/juego/grupos/unirse/{idGrupo}
+    @POST("juego/grupos/unirse/{idGrupo}")
+    Call<Void> unirseAlGrupo(@Path("idGrupo") String idGrupo, @Body User usuario);
 }

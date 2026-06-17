@@ -3,6 +3,10 @@ package com.eetac.proyecto_dsa.utils;
 import android.content.Context;
 import android.content.SharedPreferences;
 
+import android.text.TextUtils;
+
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -31,13 +35,14 @@ public class LocalUserManager {
                 .apply();
     }
 
-    // Versión completa con monedas e inventario (para cuando la API devuelva más datos)
+    // Versión completa con monedas e inventario
     public void saveSession(String email, String username, int coins, List<String> inventory) {
+        String inventoryStr = TextUtils.join(",", inventory);
         prefs.edit()
                 .putString(KEY_LOGGED_EMAIL, email)
                 .putString(KEY_LOGGED_USERNAME, username)
                 .putInt(KEY_LOGGED_COINS, coins)
-                .putStringSet(KEY_LOGGED_INVENTORY, new HashSet<>(inventory))
+                .putString(KEY_LOGGED_INVENTORY, inventoryStr)
                 .apply();
     }
 
@@ -79,21 +84,20 @@ public class LocalUserManager {
     // INVENTARIO
     // -------------------------------------------------------
     public void añadirAlInventario(String nombreObjeto) {
-        String email = prefs.getString(KEY_LOGGED_EMAIL, null);
+        List<String> inventarioActual = obtenerInventario();
+        inventarioActual.add(nombreObjeto);
+        String inventoryStr = TextUtils.join(",", inventarioActual);
 
-        Set<String> inventarioActual = obtenerInventario();
-        Set<String> nuevoInventario  = new HashSet<>(inventarioActual);
-        nuevoInventario.add(nombreObjeto);
-
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putStringSet(KEY_LOGGED_INVENTORY, nuevoInventario);
-        if (email != null) {
-            editor.putStringSet("inventory_" + email, nuevoInventario);
-        }
-        editor.apply();
+        prefs.edit()
+                .putString(KEY_LOGGED_INVENTORY, inventoryStr)
+                .apply();
     }
 
-    public Set<String> obtenerInventario() {
-        return prefs.getStringSet(KEY_LOGGED_INVENTORY, new HashSet<>());
+    public List<String> obtenerInventario() {
+        String inventoryStr = prefs.getString(KEY_LOGGED_INVENTORY, "");
+        if (inventoryStr.isEmpty()) {
+            return new ArrayList<>();
+        }
+        return new ArrayList<>(Arrays.asList(inventoryStr.split(",")));
     }
 }

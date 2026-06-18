@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/dungeon_bg"
     android:padding="16dp"
-    tools:context=".TiendaActivity">
+    tools:context=".activities.TiendaActivity">
 
     <!-- Título de la Tienda -->
     <TextView

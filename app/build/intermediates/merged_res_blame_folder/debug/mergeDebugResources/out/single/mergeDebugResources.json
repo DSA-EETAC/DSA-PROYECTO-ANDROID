@@ -8,8 +8,8 @@
         "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_input_dungeon.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_login.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_login.xml"
+        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_activity_miembros_equipo.xml.flat",
+        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/activity_miembros_equipo.xml"
     },
     {
         "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_mochila.xml.flat",
@@ -40,6 +40,10 @@
         "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\drawable\\bg_btn_gold.xml"
     },
     {
+        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_item_miembro.xml.flat",
+        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/item_miembro.xml"
+    },
+    {
         "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_login.xml.flat",
         "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_login.xml"
     },
@@ -48,11 +52,11 @@
         "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_tienda.xml.flat",
-        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_tienda.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_item_tienda_card.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\item_tienda_card.xml"
     },
     {
-        "merged": "com.eetac.proyecto_dsa.app-debug-31:/layout_item_tienda_card.xml.flat",
-        "source": "com.eetac.proyecto_dsa.app-main-33:/layout/item_tienda_card.xml"
+        "merged": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-debug-31:\\layout_activity_tienda.xml.flat",
+        "source": "C:\\Users\\grabc\\.gradle\\daemon\\9.0.0\\com.eetac.proyecto_dsa.app-main-33:\\layout\\activity_tienda.xml"
     }
 ]

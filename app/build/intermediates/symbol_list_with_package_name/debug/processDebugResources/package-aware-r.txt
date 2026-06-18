@@ -3317,6 +3317,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageAvatar
 id immediateStop
 id included
 id indeterminate
@@ -3457,6 +3458,7 @@ id radio
 id ratio
 id rectangles
 id recyclerViewGrupos
+id recyclerViewMiembros
 id report_drawn
 id reverseSawtooth
 id right
@@ -3544,9 +3546,13 @@ id tag_window_insets_animation_callback
 id text
 id text2
 id textEnd
+id textMailMiembro
+id textMonedasMiembro
+id textNombreMiembro
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
+id textTituloEquipo
 id textTop
 id text_input_end_icon
 id text_input_error_icon
@@ -3724,6 +3730,7 @@ layout abc_tooltip
 layout activity_grupos
 layout activity_login
 layout activity_main
+layout activity_miembros_equipo
 layout activity_mochila
 layout activity_register
 layout activity_tienda
@@ -3744,6 +3751,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout item_grupo
+layout item_miembro
 layout item_tienda_card
 layout m3_alert_dialog
 layout m3_alert_dialog_actions

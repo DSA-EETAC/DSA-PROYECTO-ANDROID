@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="#EEEEEE"> <ImageView
+    android:id="@+id/imageAvatar"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_marginEnd="16dp"
+    android:background="#CCCCCC" /> <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/textNombreMiembro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textMonedasMiembro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Monedas: 0"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textMailMiembro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="correo@mail.com"
+        android:textSize="12sp"
+        android:textColor="#666666" />
+</LinearLayout>
+</LinearLayout>

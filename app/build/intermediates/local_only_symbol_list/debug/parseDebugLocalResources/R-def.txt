@@ -34,9 +34,15 @@ id etConfirmPassword
 id etEmail
 id etPassword
 id etUsername
+id imageAvatar
 id layoutMonedas
 id recyclerViewGrupos
+id recyclerViewMiembros
 id scrollViewTienda
+id textMailMiembro
+id textMonedasMiembro
+id textNombreMiembro
+id textTituloEquipo
 id tvAviso
 id tvGoToLogin
 id tvGoToRegister
@@ -51,9 +57,11 @@ id txtNombreGrupo
 layout activity_grupos
 layout activity_login
 layout activity_main
+layout activity_miembros_equipo
 layout activity_mochila
 layout activity_register
 layout activity_tienda
 layout item_grupo
+layout item_miembro
 layout item_tienda_card
 style Theme.DungeonRun

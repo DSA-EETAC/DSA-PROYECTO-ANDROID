@@ -90,12 +90,12 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\grabc\.gradle\cach
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:11:9-48
 	android:usesCleartextTraffic
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:8:9-44
-activity#com.eetac.proyecto_dsa.LoginActivity
+activity#com.eetac.proyecto_dsa.activities.LoginActivity
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:13:9-20:20
 	android:exported
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:15:13-36
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:14:13-42
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:14:13-53
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:16:13-19:29
 action#android.intent.action.MAIN
@@ -106,34 +106,34 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:18:17-76
 	android:name
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:18:27-74
-activity#com.eetac.proyecto_dsa.RegisterActivity
+activity#com.eetac.proyecto_dsa.activities.RegisterActivity
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:22:9-24:39
 	android:exported
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:23:13-45
-activity#com.eetac.proyecto_dsa.MainActivity
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:23:13-56
+activity#com.eetac.proyecto_dsa.activities.MainActivity
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:26:9-28:39
 	android:exported
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:28:13-37
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:27:13-41
-activity#com.eetac.proyecto_dsa.TiendaActivity
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:27:13-52
+activity#com.eetac.proyecto_dsa.activities.TiendaActivity
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:30:9-32:39
 	android:exported
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:32:13-37
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:31:13-43
-activity#com.eetac.proyecto_dsa.MochilaActivity
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:31:13-54
+activity#com.eetac.proyecto_dsa.activities.MochilaActivity
 ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:34:9-36:39
 	android:exported
 		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:35:13-44
-activity#com.eetac.proyecto_dsa.utils.GruposActivity
-ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:38:9-58
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:35:13-55
+activity#com.eetac.proyecto_dsa.activities.GruposActivity
+ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:38:9-63
 	android:name
-		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:38:19-55
+		ADDED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml:38:19-60
 uses-sdk
 INJECTED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\grabc\AndroidStudioProjects\DSA-PROYECTO-ANDROID\app\src\main\AndroidManifest.xml

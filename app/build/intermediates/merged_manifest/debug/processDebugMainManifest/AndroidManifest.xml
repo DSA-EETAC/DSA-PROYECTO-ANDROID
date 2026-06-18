@@ -23,11 +23,10 @@
         android:extractNativeLibs="false"
         android:label="Dungeon Run"
         android:supportsRtl="true"
-        android:testOnly="true"
         android:theme="@style/Theme.DungeonRun"
         android:usesCleartextTraffic="true" >
         <activity
-            android:name="com.eetac.proyecto_dsa.LoginActivity"
+            android:name="com.eetac.proyecto_dsa.activities.LoginActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -36,18 +35,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.eetac.proyecto_dsa.RegisterActivity"
+            android:name="com.eetac.proyecto_dsa.activities.RegisterActivity"
             android:exported="false" />
         <activity
-            android:name="com.eetac.proyecto_dsa.MainActivity"
+            android:name="com.eetac.proyecto_dsa.activities.MainActivity"
             android:exported="false" />
         <activity
-            android:name="com.eetac.proyecto_dsa.TiendaActivity"
+            android:name="com.eetac.proyecto_dsa.activities.TiendaActivity"
             android:exported="false" />
         <activity
-            android:name="com.eetac.proyecto_dsa.MochilaActivity"
+            android:name="com.eetac.proyecto_dsa.activities.MochilaActivity"
             android:exported="false" />
-        <activity android:name="com.eetac.proyecto_dsa.utils.GruposActivity" />
+        <activity android:name="com.eetac.proyecto_dsa.activities.GruposActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

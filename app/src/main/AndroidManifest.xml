@@ -11,7 +11,7 @@
         android:theme="@style/Theme.DungeonRun">
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".activities.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -20,22 +20,22 @@
         </activity>
 
         <activity
-            android:name=".RegisterActivity"
+            android:name=".activities.RegisterActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".TiendaActivity"
+            android:name=".activities.TiendaActivity"
             android:exported="false"/>
 
         <activity
-            android:name=".MochilaActivity"
+            android:name=".activities.MochilaActivity"
             android:exported="false"/>
 
-        <activity android:name=".utils.GruposActivity" />
+        <activity android:name=".activities.GruposActivity" />
 
     </application>
 

@@ -16,6 +16,8 @@ public class LocalUserManager {
     private static final String PREFS_NAME          = "dungeon_users";
     private static final String KEY_LOGGED_EMAIL     = "logged_email";
     private static final String KEY_LOGGED_USERNAME  = "logged_username";
+    private static final String KEY_LOGGED_USERID  = "logged_userid";
+
     private static final String KEY_LOGGED_COINS     = "logged_coins";
     private static final String KEY_LOGGED_INVENTORY = "logged_inventory";
 
@@ -28,17 +30,19 @@ public class LocalUserManager {
     // -------------------------------------------------------
     // SESIÓN — guarda lo que devuelve la API tras el login
     // -------------------------------------------------------
-    public void saveSession(String nombre) {
+    public void saveSession(int idUsuario, String nombre) {
         prefs.edit()
+                .putInt(KEY_LOGGED_USERID, idUsuario)
                 .putString(KEY_LOGGED_EMAIL, nombre)
                 .putString(KEY_LOGGED_USERNAME, nombre)
                 .apply();
     }
 
     // Versión completa con monedas e inventario
-    public void saveSession(String email, String username, int coins, List<String> inventory) {
+    public void saveSession(int idUsuario, String email, String username, int coins, List<String> inventory) {
         String inventoryStr = TextUtils.join(",", inventory);
         prefs.edit()
+                .putInt(KEY_LOGGED_USERID, idUsuario)
                 .putString(KEY_LOGGED_EMAIL, email)
                 .putString(KEY_LOGGED_USERNAME, username)
                 .putInt(KEY_LOGGED_COINS, coins)
@@ -52,6 +56,10 @@ public class LocalUserManager {
 
     public String getLoggedUsername() {
         return prefs.getString(KEY_LOGGED_USERNAME, "Héroe");
+    }
+
+    public int getUserId() {
+        return prefs.getInt(KEY_LOGGED_USERID, -1);
     }
 
     public void logout() {

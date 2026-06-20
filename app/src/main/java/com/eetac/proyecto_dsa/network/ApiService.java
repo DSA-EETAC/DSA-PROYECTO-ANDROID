@@ -6,6 +6,9 @@ import com.eetac.proyecto_dsa.model.usuario.InventarioJugador;
 import com.eetac.proyecto_dsa.model.tienda.PeticionCompra;
 import com.eetac.proyecto_dsa.model.tienda.TiendaJuego;
 import com.eetac.proyecto_dsa.model.usuario.User;
+import com.eetac.proyecto_dsa.model.evento.Evento;
+import com.eetac.proyecto_dsa.model.evento.InscripcionRequest;
+import com.eetac.proyecto_dsa.model.usuario.User;
 
 import java.util.List;
 
@@ -48,4 +51,16 @@ public interface ApiService {
     // Petición para obtener los miembros del equipo al que pertenece el usuario
     @GET("juego/usuarios/{id}/grupo")
     Call<RespuestaGrupo> obtenerMiembrosEquipo(@Path("id") int idUsuario);
+
+    // GET /api/juego/eventos
+    @GET("juego/eventos")
+    Call<List<Evento>> getEventos();
+
+    // POST /api/juego/eventos/inscripcion
+    @POST("juego/eventos/inscripcion")
+    Call<Void> inscribirseEvento(@Body InscripcionRequest request);
+
+    // GET /api/juego/eventos/{idEvento}/usuarios (EJ5 - Izan)
+    @GET("juego/eventos/{idEvento}/usuarios")
+    Call<List<User>> getUsuariosEvento(@Path("idEvento") String idEvento);
 }

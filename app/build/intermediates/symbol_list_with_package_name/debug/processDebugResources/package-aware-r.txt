@@ -3181,7 +3181,9 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnComprarItem
+id btnEventos
 id btnGrupos
+id btnInscribirse
 id btnJugar
 id btnLogin
 id btnLogout
@@ -3189,6 +3191,8 @@ id btnMochila
 id btnRegister
 id btnTienda
 id btnUnirse
+id btnVerMiEquipo
+id btnVerUsuarios
 id btnVolverMenu
 id btnVolverMochila
 id btnVolverTienda
@@ -3457,6 +3461,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerEventos
+id recyclerUsuariosEvento
 id recyclerViewGrupos
 id recyclerViewMiembros
 id report_drawn
@@ -3580,11 +3586,16 @@ id transition_scene_layoutid_cache
 id transition_transform
 id triangle
 id tvAviso
+id tvDescripcionEvento
+id tvFechasEvento
 id tvGoToLogin
 id tvGoToRegister
 id tvListaObjetos
+id tvMailUsuario
 id tvMonedasTienda
+id tvNombreEvento
 id tvNombreItem
+id tvNombreUsuario
 id tvPrecioItem
 id tvTituloMochila
 id tvTituloTienda
@@ -3727,6 +3738,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_eventos
 layout activity_grupos
 layout activity_login
 layout activity_main
@@ -3734,6 +3746,7 @@ layout activity_miembros_equipo
 layout activity_mochila
 layout activity_register
 layout activity_tienda
+layout activity_usuarios_evento
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -3750,9 +3763,11 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout item_evento
 layout item_grupo
 layout item_miembro
 layout item_tienda_card
+layout item_usuario_evento
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title

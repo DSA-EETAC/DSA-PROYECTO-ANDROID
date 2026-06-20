@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnMochila = findViewById(R.id.btnMochila);
         Button btnJugar   = findViewById(R.id.btnJugar);
         Button btnGrupos  = findViewById(R.id.btnGrupos);
+        Button btnEventos = findViewById(R.id.btnEventos);
         btnLogout         = findViewById(R.id.btnLogout);
 
         tvWelcome.setText("¡Bienvenido, " + userManager.getLoggedUsername() + "!");
@@ -60,6 +61,10 @@ public class MainActivity extends AppCompatActivity {
 
         btnGrupos.setOnClickListener(v ->
                 startActivity(new Intent(this, GruposActivity.class))
+        );
+
+        btnEventos.setOnClickListener(v ->
+                startActivity(new Intent(this, EventosActivity.class))
         );
 
         btnJugar.setOnClickListener(v -> {

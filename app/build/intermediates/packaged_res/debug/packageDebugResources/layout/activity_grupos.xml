@@ -17,8 +17,18 @@
         android:id="@+id/recyclerViewGrupos"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" /> <Button
-    android:id="@+id/btnVolverMenu"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/btnVerMiEquipo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ver mi equipo"
+        android:backgroundTint="#4CAF50"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btnVolverMenu"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:text="Volver al Menú"

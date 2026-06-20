@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_card_dungeon"
+    android:padding="16dp"
+    android:layout_marginBottom="12dp">
+
+    <TextView
+        android:id="@+id/tvNombreEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dungeon_gold"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:fontFamily="serif"
+        android:letterSpacing="0.1"/>
+
+    <TextView
+        android:id="@+id/tvDescripcionEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp"
+        android:fontFamily="serif"
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:id="@+id/tvFechasEvento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/dungeon_text_label"
+        android:textSize="11sp"
+        android:fontFamily="serif"
+        android:layout_marginTop="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
+
+        <Button
+            android:id="@+id/btnInscribirse"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_gold"
+            android:text="⚔ UNIR-ME"
+            android:textColor="@color/dungeon_text_light"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:letterSpacing="0.1"
+            android:layout_marginEnd="6dp"/>
+
+        <Button
+            android:id="@+id/btnVerUsuarios"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_btn_red"
+            android:text="🛡 HEROIS"
+            android:textColor="@color/dungeon_text_light"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:letterSpacing="0.1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

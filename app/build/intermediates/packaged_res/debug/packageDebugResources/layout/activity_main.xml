@@ -79,18 +79,41 @@
         android:id="@+id/btnLogout"
         android:layout_width="wrap_content"
         android:layout_height="48dp"
-        android:background="@drawable/bg_btn_gold"
-        android:text="Cerrar sesión"
+        android:background="@drawable/bg_btn_red"
+        android:text="🚪 CERRAR SESIÓN"
         android:textColor="@color/dungeon_text_light"
         android:textSize="12sp"
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
-        android:fontFamily="serif"/>
+        android:fontFamily="serif"
+        android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btnGrupos"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Ver Equipos" />
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_btn_gold"
+        android:text="VER EQUIPOS"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:fontFamily="serif"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"/>
+
+    <Button
+        android:id="@+id/btnEventos"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/bg_btn_gold"
+        android:fontFamily="serif"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:text="⚔ MISSIONS"
+        android:textColor="@color/dungeon_text_light"
+        android:textSize="12sp" />
 
 </LinearLayout>
+

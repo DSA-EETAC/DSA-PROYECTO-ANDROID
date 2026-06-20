@@ -23,6 +23,7 @@
         android:extractNativeLibs="false"
         android:label="Dungeon Run"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/Theme.DungeonRun"
         android:usesCleartextTraffic="true" >
         <activity
@@ -47,6 +48,8 @@
             android:name="com.eetac.proyecto_dsa.activities.MochilaActivity"
             android:exported="false" />
         <activity android:name="com.eetac.proyecto_dsa.activities.GruposActivity" />
+        <activity android:name="com.eetac.proyecto_dsa.activities.EventosActivity" />
+        <activity android:name="com.eetac.proyecto_dsa.activities.UsuariosEventoActivity" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"

@@ -36,6 +36,8 @@
             android:exported="false"/>
 
         <activity android:name=".activities.GruposActivity" />
+        <activity android:name=".activities.EventosActivity" />
+        <activity android:name=".activities.UsuariosEventoActivity" />
 
     </application>
 

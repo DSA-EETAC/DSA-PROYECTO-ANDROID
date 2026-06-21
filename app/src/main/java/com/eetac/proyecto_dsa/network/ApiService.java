@@ -1,5 +1,8 @@
 package com.eetac.proyecto_dsa.network;
 
+import com.eetac.proyecto_dsa.model.AiRequest;
+import com.eetac.proyecto_dsa.model.AiResponse;
+import com.eetac.proyecto_dsa.model.OllamaResponse;
 import com.eetac.proyecto_dsa.model.grupo.Grupo;
 import com.eetac.proyecto_dsa.model.grupo.ListaGrupos;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
@@ -11,7 +14,6 @@ import com.eetac.proyecto_dsa.model.usuario.PartidaFin;
 import com.eetac.proyecto_dsa.model.usuario.User;
 import com.eetac.proyecto_dsa.model.evento.Evento;
 import com.eetac.proyecto_dsa.model.evento.InscripcionRequest;
-import com.eetac.proyecto_dsa.model.usuario.User;
 
 import java.util.List;
 
@@ -49,7 +51,6 @@ public interface ApiService {
     Call<ListaGrupos> getListaGrupos();
 
     // POST /api/juego/grupos/{idGrupo}/unirse
-    // POST /api/juego/grupos/unirse/{idGrupo}/unirse
     @POST("juego/grupos/{idGrupo}/unirse")
     Call<Void> unirseAlGrupo(@Path("idGrupo") int idGrupo, @Body User usuario);
 
@@ -75,5 +76,5 @@ public interface ApiService {
 
     // LLAMADA A LA IA
     @POST
-    Call<Response> preguntarIA(@Url String url, @Body AiRequest request);
+    Call<OllamaResponse> preguntarIA(@Url String url, @Body AiRequest request);
 }

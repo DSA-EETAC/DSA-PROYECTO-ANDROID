@@ -1,26 +1,24 @@
 package com.eetac.proyecto_dsa.model.tienda;
 
 public class PeticionCompra {
-    private int idUsuario;
+    private String nombreJugador;
     private String nombreObjeto;
     private int precio;
 
-    // Constructor vacío (OBLIGATORIO para que el JSON no explote)
     public PeticionCompra() {}
 
-    public PeticionCompra(int idUsuario, String nombreObjeto, int precio) {
-        this.idUsuario = idUsuario;
+    public PeticionCompra(String nombreJugador, String nombreObjeto, int precio) {
+        this.nombreJugador = nombreJugador;
         this.nombreObjeto = nombreObjeto;
         this.precio = precio;
     }
 
-    // Getters
-    public int getIdUsuario() { return idUsuario; }
-    public String getNombreObjeto() { return nombreObjeto; }
-    public int getPrecio() { return precio; }
+    public String getNombreJugador() { return nombreJugador; }
+    public void setNombreJugador(String nombreJugador) { this.nombreJugador = nombreJugador; }
 
-    // Setters
-    public void setIdUsuario(int idUsuario) { this.idUsuario = idUsuario; }
+    public String getNombreObjeto() { return nombreObjeto; }
     public void setNombreObjeto(String nombreObjeto) { this.nombreObjeto = nombreObjeto; }
+
+    public int getPrecio() { return precio; }
     public void setPrecio(int precio) { this.precio = precio; }
 }

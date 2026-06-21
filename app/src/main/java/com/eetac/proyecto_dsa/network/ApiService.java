@@ -3,12 +3,13 @@ package com.eetac.proyecto_dsa.network;
 import com.eetac.proyecto_dsa.model.grupo.Grupo;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
 import com.eetac.proyecto_dsa.model.usuario.InventarioJugador;
+import com.eetac.proyecto_dsa.model.tienda.Item;
 import com.eetac.proyecto_dsa.model.tienda.PeticionCompra;
 import com.eetac.proyecto_dsa.model.tienda.TiendaJuego;
+import com.eetac.proyecto_dsa.model.usuario.PartidaFin;
 import com.eetac.proyecto_dsa.model.usuario.User;
 import com.eetac.proyecto_dsa.model.evento.Evento;
 import com.eetac.proyecto_dsa.model.evento.InscripcionRequest;
-import com.eetac.proyecto_dsa.model.usuario.User;
 
 import java.util.List;
 
@@ -32,9 +33,9 @@ public interface ApiService {
     @POST("juego/comprar")
     Call<Void> comprar(@Body PeticionCompra peticion);
 
-    // GET /api/juego/inventario/{id}
-    @GET("juego/inventario/{id}")
-    Call<InventarioJugador> getInventario(@Path("id") int idUsuario);
+    // GET /api/juego/inventario/{nombre}
+    @GET("juego/inventario/{nombre}")
+    Call<InventarioJugador> getInventario(@Path("nombre") String nombreUsuario);
 
     // GET /api/juego/tienda
     @GET("juego/tienda")
@@ -44,7 +45,7 @@ public interface ApiService {
     @GET("juego/grupos")
     Call<List<Grupo>> getListaGrupos();
 
-    // POST /api/juego/grupos/unirse/{idGrupo}
+    // POST /api/juego/grupos/unirse/{idGrupo}/unirse
     @POST("juego/grupos/{idGrupo}/unirse")
     Call<Void> unirseAlGrupo(@Path("idGrupo") int idGrupo, @Body int idUsuario);
 
@@ -60,7 +61,11 @@ public interface ApiService {
     @POST("juego/eventos/inscripcion")
     Call<Void> inscribirseEvento(@Body InscripcionRequest request);
 
-    // GET /api/juego/eventos/{idEvento}/usuarios (EJ5 - Izan)
+    // GET /api/juego/eventos/{idEvento}/usuarios
     @GET("juego/eventos/{idEvento}/usuarios")
     Call<List<User>> getUsuariosEvento(@Path("idEvento") String idEvento);
+
+    // POST /api/juego/partida/fin
+    @POST("juego/partida/fin")
+    Call<Void> finalizarPartida(@Body PartidaFin partida);
 }

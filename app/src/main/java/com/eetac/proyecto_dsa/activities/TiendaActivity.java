@@ -88,16 +88,16 @@ public class TiendaActivity extends AppCompatActivity {
     }
 
     public void realizarCompra(Item item) {
-        int userId = userManager.getUserId();
+        String username = userManager.getLoggedUsername();
         int precio = (int) item.getPrecio();
         
-        // Comprobar saldo local antes de enviar (opcional, el server debería validar)
+        // Comprobar saldo local antes de enviar
         if (userManager.getCoins() < precio) {
             Toast.makeText(this, "❌ Monedas insuficientes", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        PeticionCompra peticion = new PeticionCompra(userId, item.getNombre(), precio);
+        PeticionCompra peticion = new PeticionCompra(username, item.getNombre(), precio);
 
         RetrofitClient.getService().comprar(peticion).enqueue(new Callback<Void>() {
             @Override

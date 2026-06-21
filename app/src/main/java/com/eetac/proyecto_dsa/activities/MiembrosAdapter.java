@@ -8,15 +8,14 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.eetac.proyecto_dsa.R;
-import com.eetac.proyecto_dsa.model.grupo.MiembroGrupo;
 import java.util.List;
 
 public class MiembrosAdapter extends RecyclerView.Adapter<MiembrosAdapter.ViewHolder> {
 
-    private List<MiembroGrupo> listaMiembros;
+    private List<String> listaMiembros;
 
     // Constructor: recibe la lista de datos
-    public MiembrosAdapter(List<MiembroGrupo> listaMiembros) {
+    public MiembrosAdapter(List<String> listaMiembros) {
         this.listaMiembros = listaMiembros;
     }
 
@@ -31,12 +30,12 @@ public class MiembrosAdapter extends RecyclerView.Adapter<MiembrosAdapter.ViewHo
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // Obtenemos el miembro actual según su posición en la lista
-        MiembroGrupo miembro = listaMiembros.get(position);
+        String miembro = listaMiembros.get(position);
 
         // Rellenamos los datos en la vista usando los Getters con los nombres que me dijiste
-        holder.textNombre.setText(miembro.getNombre());
-        holder.textMonedas.setText("Monedas: " + miembro.getMonedas());
-        holder.textMail.setText(miembro.getMail());
+        holder.textNombre.setText(miembro);
+        holder.textMonedas.setVisibility(View.GONE);
+        holder.textMail.setVisibility(View.GONE);
 
         // NOTA: Si 'mail' es realmente un texto y no una URL de imagen, el ImageView 'imageAvatar'
         // se quedará con el fondo gris. Si usáis Glide para imágenes, iría aquí.
@@ -44,7 +43,7 @@ public class MiembrosAdapter extends RecyclerView.Adapter<MiembrosAdapter.ViewHo
 
     @Override
     public int getItemCount() {
-        return listaMiembros.size();
+        return listaMiembros != null ? listaMiembros.size() : 0;
     }
 
     // Clase interna que conecta las variables de Java con los IDs del XML

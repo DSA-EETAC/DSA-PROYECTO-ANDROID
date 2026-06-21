@@ -1,6 +1,7 @@
 package com.eetac.proyecto_dsa.network;
 
 import com.eetac.proyecto_dsa.model.grupo.Grupo;
+import com.eetac.proyecto_dsa.model.grupo.ListaGrupos;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
 import com.eetac.proyecto_dsa.model.usuario.InventarioJugador;
 import com.eetac.proyecto_dsa.model.tienda.PeticionCompra;
@@ -8,7 +9,6 @@ import com.eetac.proyecto_dsa.model.tienda.TiendaJuego;
 import com.eetac.proyecto_dsa.model.usuario.User;
 import com.eetac.proyecto_dsa.model.evento.Evento;
 import com.eetac.proyecto_dsa.model.evento.InscripcionRequest;
-import com.eetac.proyecto_dsa.model.usuario.User;
 
 import java.util.List;
 
@@ -32,9 +32,9 @@ public interface ApiService {
     @POST("juego/comprar")
     Call<Void> comprar(@Body PeticionCompra peticion);
 
-    // GET /api/juego/inventario/{id}
-    @GET("juego/inventario/{id}")
-    Call<InventarioJugador> getInventario(@Path("id") int idUsuario);
+    // GET /api/juego/inventario/{nombre}
+    @GET("juego/inventario/{nombre}")
+    Call<InventarioJugador> getInventario(@Path("nombre") String nombreUsuario);
 
     // GET /api/juego/tienda
     @GET("juego/tienda")
@@ -42,15 +42,15 @@ public interface ApiService {
 
     // GET /api/juego/grupos
     @GET("juego/grupos")
-    Call<List<Grupo>> getListaGrupos();
+    Call<ListaGrupos> getListaGrupos();
 
-    // POST /api/juego/grupos/unirse/{idGrupo}
+    // POST /api/juego/grupos/{idGrupo}/unirse
     @POST("juego/grupos/{idGrupo}/unirse")
-    Call<Void> unirseAlGrupo(@Path("idGrupo") int idGrupo, @Body int idUsuario);
+    Call<Void> unirseAlGrupo(@Path("idGrupo") int idGrupo, @Body User usuario);
 
     // Petición para obtener los miembros del equipo al que pertenece el usuario
-    @GET("juego/usuarios/{id}/grupo")
-    Call<RespuestaGrupo> obtenerMiembrosEquipo(@Path("id") int idUsuario);
+    @GET("juego/usuarios/{nombre}/grupo")
+    Call<RespuestaGrupo> obtenerMiembrosEquipo(@Path("nombre") String nombreUsuario);
 
     // GET /api/juego/eventos
     @GET("juego/eventos")

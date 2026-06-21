@@ -56,7 +56,7 @@ public class GruposAdapter extends RecyclerView.Adapter<GruposAdapter.ViewHolder
 
     @Override
     public int getItemCount() {
-        return listaGrupos.size();
+        return listaGrupos != null ? listaGrupos.size() : 0;
     }
 
     // Clase interna que busca los elementos del layout

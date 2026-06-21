@@ -4,6 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 public class User {
 
+    @SerializedName(value = "idUsuario", alternate = {"id"})
     private int idUsuario;
 
     @SerializedName("nombre")

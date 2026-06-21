@@ -8,10 +8,11 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.eetac.proyecto_dsa.R;
-import com.eetac.proyecto_dsa.model.grupo.MiembroGrupo;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
 import com.eetac.proyecto_dsa.network.RetrofitClient;
 import com.eetac.proyecto_dsa.network.ApiService;
+import com.eetac.proyecto_dsa.utils.LocalUserManager;
+
 
 import java.util.List;
 import retrofit2.Call;
@@ -41,12 +42,12 @@ public class MiembrosGrupoActivity extends AppCompatActivity {
     }
 
     private void obtenerDatosDelServidor() {
-        // Necesitas el ID del usuario. Aquí pongo uno de ejemplo,
-        // en la app real probablemente lo saques de SharedPreferences o un Intent
-        int idUsuarioActual = 1;
+        // Obtenemos el nombre del usuario logeado desde LocalUserManager
+        LocalUserManager userManager = new LocalUserManager(this);
+        String nombreUsuarioActual = userManager.getLoggedUsername();
 
         ApiService apiService = RetrofitClient.getService();
-        Call<RespuestaGrupo> call = apiService.obtenerMiembrosEquipo(idUsuarioActual);
+        Call<RespuestaGrupo> call = apiService.obtenerMiembrosEquipo(nombreUsuarioActual);
 
         call.enqueue(new Callback<RespuestaGrupo>() {
             @Override
@@ -54,8 +55,8 @@ public class MiembrosGrupoActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.body() != null) {
 
                     // Extraemos los datos del envoltorio
-                    String nombreDelEquipo = response.body().getGrupo();
-                    List<MiembroGrupo> lista = response.body().getMiembros();
+                    String nombreDelEquipo = response.body().getNombreGrupo();
+                    List<String> lista = response.body().getMiembros();
 
                     // Actualizamos el título
                     textTitulo.setText("Equipo: " + nombreDelEquipo);

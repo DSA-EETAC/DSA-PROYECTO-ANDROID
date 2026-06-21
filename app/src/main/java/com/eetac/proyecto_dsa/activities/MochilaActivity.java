@@ -30,9 +30,9 @@ public class MochilaActivity extends AppCompatActivity {
 
         tvLista.setText("Cargando inventario...");
 
-        // Llamada al servidor para obtener el inventario real por ID
-        int userId = userManager.getUserId();
-        RetrofitClient.getService().getInventario(userId).enqueue(new Callback<InventarioJugador>() {
+        // Llamada al servidor para obtener el inventario real por Nombre
+        String username = userManager.getLoggedUsername();
+        RetrofitClient.getService().getInventario(username).enqueue(new Callback<InventarioJugador>() {
             @Override
             public void onResponse(Call<InventarioJugador> call, Response<InventarioJugador> response) {
                 if (response.isSuccessful() && response.body() != null) {

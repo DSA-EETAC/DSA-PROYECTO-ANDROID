@@ -10,8 +10,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.eetac.proyecto_dsa.R;
 import androidx.appcompat.app.AlertDialog;
 import com.eetac.proyecto_dsa.model.grupo.Grupo;
-import com.eetac.proyecto_dsa.model.grupo.MiembroGrupo;
+import com.eetac.proyecto_dsa.model.grupo.ListaGrupos;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
+import com.eetac.proyecto_dsa.model.usuario.User;
 import com.eetac.proyecto_dsa.network.RetrofitClient;
 import com.eetac.proyecto_dsa.utils.LocalUserManager;
 
@@ -46,38 +47,48 @@ public class GruposActivity extends AppCompatActivity {
     }
 
     private void cargarGrupos() {
-        RetrofitClient.getService().getListaGrupos().enqueue(new Callback<List<Grupo>>() {
+        RetrofitClient.getService().getListaGrupos().enqueue(new Callback<ListaGrupos>() {
             @Override
-            public void onResponse(Call<List<Grupo>> call, Response<List<Grupo>> response) {
+            public void onResponse(Call<ListaGrupos> call, Response<ListaGrupos> response) {
                 if (response.isSuccessful() && response.body() != null) {
-                    adapter = new GruposAdapter(response.body(), new GruposAdapter.OnItemClickListener() {
-                        @Override
-                        public void onUnirseClick(Grupo grupo) {
-                            unirseAlGrupo(grupo);
-                        }
-                    });
-                    recyclerView.setAdapter(adapter);
+                    List<Grupo> grupos = response.body().getGrupos();
+                    if (grupos != null) {
+                        adapter = new GruposAdapter(grupos, new GruposAdapter.OnItemClickListener() {
+                            @Override
+                            public void onUnirseClick(Grupo grupo) {
+                                unirseAlGrupo(grupo);
+                            }
+                        });
+                        recyclerView.setAdapter(adapter);
+                    } else {
+                        Toast.makeText(GruposActivity.this, "La lista de grupos está vacía", Toast.LENGTH_SHORT).show();
+                    }
                 } else {
                     Toast.makeText(GruposActivity.this, "Error al cargar grupos", Toast.LENGTH_SHORT).show();
                 }
             }
 
             @Override
-            public void onFailure(Call<List<Grupo>> call, Throwable t) {
+            public void onFailure(Call<ListaGrupos> call, Throwable t) {
                 Toast.makeText(GruposActivity.this, "Fallo de conexión", Toast.LENGTH_SHORT).show();
             }
         });
     }
 
     private void unirseAlGrupo(Grupo grupo) {
-        int userId = userManager.getUserId();
-        RetrofitClient.getService().unirseAlGrupo(grupo.getId(), userId).enqueue(new Callback<Void>() {
+        User user = new User();
+        user.setIdUsuario(userManager.getUserId());
+        user.setNombre(userManager.getLoggedUsername());
+
+        RetrofitClient.getService().unirseAlGrupo(grupo.getId(), user).enqueue(new Callback<Void>() {
             @Override
             public void onResponse(Call<Void> call, Response<Void> response) {
                 if (response.isSuccessful()) {
                     Toast.makeText(GruposActivity.this, "¡Te has unido a " + grupo.getNombre() + "!", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(GruposActivity.this, "Error al unirte (¿Ya estás en un grupo?)", Toast.LENGTH_SHORT).show();
+                    // Si el servidor permite la unión automática, no deberíamos entrar aquí.
+                    // Si sigue dando error, el backend podría requerir una lógica de "switch" interna.
+                    Toast.makeText(GruposActivity.this, "Error al cambiar de grupo", Toast.LENGTH_SHORT).show();
                 }
             }
 
@@ -89,8 +100,8 @@ public class GruposActivity extends AppCompatActivity {
     }
 
     private void verMiEquipo() {
-        int userId = userManager.getUserId();
-        RetrofitClient.getService().obtenerMiembrosEquipo(userId).enqueue(new Callback<RespuestaGrupo>() {
+        String username = userManager.getLoggedUsername();
+        RetrofitClient.getService().obtenerMiembrosEquipo(username).enqueue(new Callback<RespuestaGrupo>() {
             @Override
             public void onResponse(Call<RespuestaGrupo> call, Response<RespuestaGrupo> response) {
                 if (response.isSuccessful() && response.body() != null) {
@@ -113,13 +124,13 @@ public class GruposActivity extends AppCompatActivity {
         sb.append("Compañeros:\n\n");
         
         if (equipo.getMiembros() != null) {
-            for (MiembroGrupo m : equipo.getMiembros()) {
-                sb.append("👤 ").append(m.getNombre()).append("\n");
+            for (String m : equipo.getMiembros()) {
+                sb.append("👤 ").append(m).append("\n");
             }
         }
 
         new AlertDialog.Builder(this)
-                .setTitle("Tu Equipo: " + equipo.getGrupo())
+                .setTitle("Tu Equipo: " + equipo.getNombreGrupo())
                 .setMessage(sb.toString())
                 .setPositiveButton("Genial", null)
                 .show();

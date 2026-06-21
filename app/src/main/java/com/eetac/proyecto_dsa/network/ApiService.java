@@ -20,6 +20,7 @@ import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
+import retrofit2.http.Url;
 
 public interface ApiService {
 
@@ -37,7 +38,7 @@ public interface ApiService {
 
     // GET /api/juego/inventario/{nombre}
     @GET("juego/inventario/{nombre}")
-    Call<InventarioJugador> getInventario(@Path("nombre") String nombreUsuario);
+    Call<InventarioJugador> getInventario(@Path("nombre") String nombre);
 
     // GET /api/juego/tienda
     @GET("juego/tienda")
@@ -71,4 +72,8 @@ public interface ApiService {
     // POST /api/juego/partida/fin
     @POST("juego/partida/fin")
     Call<Void> finalizarPartida(@Body PartidaFin partida);
+
+    // LLAMADA A LA IA
+    @POST
+    Call<Response> preguntarIA(@Url String url, @Body AiRequest request);
 }

@@ -5,6 +5,7 @@ public class PeticionCompra {
     private String nombreObjeto;
     private int precio;
 
+    // Constructor vacío (OBLIGATORIO para que el JSON no explote)
     public PeticionCompra() {}
 
     public PeticionCompra(String nombreJugador, String nombreObjeto, int precio) {

@@ -4,32 +4,42 @@ import java.util.List;
 
 public class RespuestaGrupo {
 
-    private String grupo;
-    private List<MiembroGrupo> miembros;
+    private String nombreGrupo;
+    private List<String> miembros;
+    private boolean tieneGrupo;
 
     // Constructor vacío
     public RespuestaGrupo() {
     }
 
-    public RespuestaGrupo(String grupo, List<MiembroGrupo> miembros) {
-        this.grupo = grupo;
+    public RespuestaGrupo(String nombreGrupo, List<String> miembros, boolean tieneGrupo) {
+        this.nombreGrupo = nombreGrupo;
         this.miembros = miembros;
+        this.tieneGrupo = tieneGrupo;
     }
 
     // Getters y Setters
-    public String getGrupo() {
-        return grupo;
+    public String getNombreGrupo() {
+        return nombreGrupo;
     }
 
-    public void setGrupo(String grupo) {
-        this.grupo = grupo;
+    public void setNombreGrupo(String nombreGrupo) {
+        this.nombreGrupo = nombreGrupo;
     }
 
-    public List<MiembroGrupo> getMiembros() {
+    public List<String> getMiembros() {
         return miembros;
     }
 
-    public void setMiembros(List<MiembroGrupo> miembros) {
+    public void setMiembros(List<String> miembros) {
         this.miembros = miembros;
+    }
+
+    public boolean isTieneGrupo() {
+        return tieneGrupo;
+    }
+
+    public void setTieneGrupo(boolean tieneGrupo) {
+        this.tieneGrupo = tieneGrupo;
     }
 }

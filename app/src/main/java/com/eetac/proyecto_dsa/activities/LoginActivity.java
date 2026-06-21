@@ -64,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
 
                     if (response.isSuccessful() && response.body() != null) {
                         User user = response.body();
+                        android.util.Log.d("DEBUG_LOGIN", "ID recibido del servidor: " + user.getIdUsuario());
                         // Guardamos la sesión y actualizamos las monedas recibidas del servidor
                         userManager.saveSession(user.getIdUsuario(), user.getNombre());
                         userManager.updateCoins(user.getMonedas());

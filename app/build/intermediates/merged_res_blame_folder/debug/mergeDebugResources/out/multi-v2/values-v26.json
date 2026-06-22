@@ -4,7 +4,7 @@
             "outputFile": "com.eetac.proyecto_dsa.app-mergeDebugResources-29:/values-v26/values-v26.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\grabc\\.gradle\\caches\\9.0.0\\transforms\\56088aaea044f3ce81ca653bd7dc471a\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
+                    "source": "C:\\Users\\izang\\.gradle\\caches\\9.0.0\\transforms\\56088aaea044f3ce81ca653bd7dc471a\\transformed\\appcompat-1.6.1\\res\\values-v26\\values-v26.xml",
                     "from": {
                         "startLines": "2,3,4,8,12,16",
                         "startColumns": "4,4,4,4,4,4",

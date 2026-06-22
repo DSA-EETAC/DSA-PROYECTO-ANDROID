@@ -1,79 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/dungeon_bg"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="32dp">
+    android:background="@color/dungeon_bg">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="⚔️"
-        android:textSize="64sp"
-        android:layout_marginBottom="16dp"/>
+    <LinearLayout
+        android:id="@+id/mainMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="32dp">
 
-    <TextView
-        android:id="@+id/tvWelcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="¡Bienvenido, Héroe!"
-        android:textColor="@color/dungeon_gold"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="serif"
-        android:letterSpacing="0.1"
-        android:layout_marginBottom="8dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚔️"
+            android:textSize="64sp"
+            android:layout_marginBottom="16dp"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="El dungeon te espera..."
-        android:textColor="@color/dungeon_text_label"
-        android:textSize="13sp"
-        android:fontFamily="serif"
-        android:layout_marginBottom="48dp"/>
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¡Bienvenido, Héroe!"
+            android:textColor="@color/dungeon_gold"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
 
-    <Button
-        android:id="@+id/btnTienda"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:background="@drawable/bg_btn_gold"
-        android:text="Ir a la Tienda"
-        android:textColor="@color/dungeon_text_light"
-        android:textSize="12sp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:fontFamily="serif"
-        android:layout_marginBottom="16dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="El dungeon te espera..."
+            android:textColor="@color/dungeon_text_label"
+            android:textSize="13sp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="48dp"/>
 
-    <Button
-        android:id="@+id/btnMochila"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:background="@drawable/bg_btn_gold"
-        android:text="Ver Mochila"
-        android:textColor="@color/dungeon_text_light"
-        android:textSize="12sp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:fontFamily="serif"
-        android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btnTienda"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_btn_gold"
+            android:text="Ir a la Tienda"
+            android:textColor="@color/dungeon_text_light"
+            android:textSize="12sp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
 
-    <Button
-        android:id="@+id/btnJugar"
-        android:layout_width="wrap_content"
-        android:layout_height="48dp"
-        android:background="@drawable/bg_btn_gold"
-        android:text="Jugar"
-        android:textColor="@color/dungeon_text_light"
-        android:textSize="12sp"
-        android:paddingStart="24dp"
-        android:paddingEnd="24dp"
-        android:fontFamily="serif"
-        android:layout_marginBottom="16dp"/>
+        <Button
+            android:id="@+id/btnMochila"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_btn_gold"
+            android:text="Ver Mochila"
+            android:textColor="@color/dungeon_text_light"
+            android:textSize="12sp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
+
+        <Button
+            android:id="@+id/btnJugar"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_btn_gold"
+            android:text="Jugar"
+            android:textColor="@color/dungeon_text_light"
+            android:textSize="12sp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:fontFamily="serif"
+            android:layout_marginBottom="16dp"/>
 
     <Button
         android:id="@+id/btnLogout"
@@ -115,5 +121,110 @@
         android:textColor="@color/dungeon_text_light"
         android:textSize="12sp" />
 
-</LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/containerMensaje"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        android:background="@color/dungeon_bg"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/fabMensaje"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat con el sabio (Assistente)"
+            android:textColor="@color/dungeon_gold"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_dungeon"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp">
+
+            <ScrollView
+                android:id="@+id/scrollChat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/layoutHistorialMensajes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+            </ScrollView>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Escribir duda:"
+            android:textColor="@color/dungeon_gold"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:background="@drawable/bg_card_dungeon"
+            android:padding="12dp">
+
+            <EditText
+                android:id="@+id/etMensajeKingdom"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:hint="Escribe tu mensaje aquí..."
+                android:textColor="@color/dungeon_text_light"
+                android:textColorHint="@color/dungeon_text_label"
+                android:gravity="top"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnEnviarMensaje"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:layout_gravity="end"
+                android:background="@drawable/bg_btn_gold"
+                android:text="Enviar mensaje"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:textColor="@color/dungeon_text_light"
+                android:textSize="10sp"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabMensaje"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:contentDescription="Mensaje"
+        app:backgroundTint="@color/dungeon_gold"
+        app:srcCompat="@android:drawable/ic_menu_send"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:fabSize="normal"
+        app:tint="@color/dungeon_bg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

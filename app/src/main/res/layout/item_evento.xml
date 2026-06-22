@@ -7,6 +7,13 @@
     android:padding="16dp"
     android:layout_marginBottom="12dp">
 
+    <ImageView
+        android:id="@+id/ivEventoImagen"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="10dp"/>
+
     <TextView
         android:id="@+id/tvNombreEvento"
         android:layout_width="wrap_content"

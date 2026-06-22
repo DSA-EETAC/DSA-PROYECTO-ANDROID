@@ -2,7 +2,7 @@ package com.eetac.proyecto_dsa.network;
 
 import com.eetac.proyecto_dsa.model.AiRequest;
 import com.eetac.proyecto_dsa.model.AiResponse;
-import com.eetac.proyecto_dsa.model.OllamaResponse;
+import com.eetac.proyecto_dsa.model.AiRequest;
 import com.eetac.proyecto_dsa.model.grupo.Grupo;
 import com.eetac.proyecto_dsa.model.grupo.ListaGrupos;
 import com.eetac.proyecto_dsa.model.grupo.RespuestaGrupo;
@@ -76,5 +76,5 @@ public interface ApiService {
 
     // LLAMADA A LA IA
     @POST
-    Call<OllamaResponse> preguntarIA(@Url String url, @Body AiRequest request);
+    Call<AiResponse> preguntarIA(@Url String url, @Body AiRequest request);
 }

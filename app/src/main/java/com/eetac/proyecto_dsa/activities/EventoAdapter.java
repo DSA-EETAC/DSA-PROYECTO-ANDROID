@@ -9,6 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import android.widget.ImageView;
+import com.squareup.picasso.Picasso;
 
 import com.eetac.proyecto_dsa.R;
 import com.eetac.proyecto_dsa.model.evento.Evento;
@@ -53,6 +55,20 @@ public class EventoAdapter extends RecyclerView.Adapter<EventoAdapter.ViewHolder
         holder.tvNombre.setText(e.getNombre());
         holder.tvDescripcion.setText(e.getDescripcion());
         holder.tvFechas.setText(e.getFecha_inicio() + " → " + e.getFecha_fin());
+        if (e.getImagen_URL() != null && !e.getImagen_URL().isEmpty()) {
+            Picasso.get().load(e.getImagen_URL()).into(holder.ivImagen);
+        }
+
+        String avui = new java.text.SimpleDateFormat("yyyy-MM-dd")
+                .format(new java.util.Date());
+        if (e.getFecha_inicio() != null && e.getFecha_inicio().compareTo(avui) > 0) {
+            holder.btnInscribirse.setText("⏳ PRÒXIMAMENT");
+            holder.btnInscribirse.setEnabled(false);
+            holder.btnInscribirse.setBackgroundTintList(
+                    android.content.res.ColorStateList.valueOf(
+                            android.graphics.Color.parseColor("#555555")));
+        }
+
 
         holder.btnInscribirse.setOnClickListener(v -> {
             InscripcionRequest req = new InscripcionRequest(username, e.getId());
@@ -86,6 +102,7 @@ public class EventoAdapter extends RecyclerView.Adapter<EventoAdapter.ViewHolder
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvNombre, tvDescripcion, tvFechas;
         Button btnInscribirse, btnVerUsuarios;
+        ImageView ivImagen;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -94,6 +111,7 @@ public class EventoAdapter extends RecyclerView.Adapter<EventoAdapter.ViewHolder
             tvFechas       = itemView.findViewById(R.id.tvFechasEvento);
             btnInscribirse = itemView.findViewById(R.id.btnInscribirse);
             btnVerUsuarios = itemView.findViewById(R.id.btnVerUsuarios);
+            ivImagen       = itemView.findViewById(R.id.ivEventoImagen);
         }
     }
 }

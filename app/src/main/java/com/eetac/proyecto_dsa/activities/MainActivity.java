@@ -20,7 +20,7 @@ import com.eetac.proyecto_dsa.R;
 import com.eetac.proyecto_dsa.model.AiRequest;
 import com.eetac.proyecto_dsa.model.AiResponse;
 import com.eetac.proyecto_dsa.model.GameKnowledgeManager;
-import com.eetac.proyecto_dsa.model.OllamaResponse;
+import com.eetac.proyecto_dsa.model.AiResponse;
 import com.eetac.proyecto_dsa.network.RetrofitClient;
 import com.eetac.proyecto_dsa.utils.LocalUserManager;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -134,9 +134,9 @@ public class MainActivity extends AppCompatActivity {
         );
         String urlIA = "http://10.4.119.50:8080/api/generate";
 
-        RetrofitClient.getService().preguntarIA(urlIA, aiReq).enqueue(new Callback<OllamaResponse>() {
+        RetrofitClient.getService().preguntarIA(urlIA, aiReq).enqueue(new Callback<AiResponse>() {
             @Override
-            public void onResponse(@NonNull Call<OllamaResponse> call, @NonNull retrofit2.Response<OllamaResponse> response) {
+            public void onResponse(@NonNull Call<AiResponse> call, @NonNull retrofit2.Response<AiResponse> response) {
                 if (response.isSuccessful() && response.body() != null) {
                     String resultText = response.body().getResponse();
                     runOnUiThread(() -> {
@@ -169,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onFailure(@NonNull Call<OllamaResponse> call, @NonNull Throwable t) {
+            public void onFailure(@NonNull Call<AiResponse> call, @NonNull Throwable t) {
                 runOnUiThread(() -> {
                     añadirMensajeAlChat("Error de red: " + t.getMessage(), false);
                     actualizarFAQ(Arrays.asList("Hola"));

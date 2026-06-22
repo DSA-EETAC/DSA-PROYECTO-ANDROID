@@ -10,6 +10,10 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <queries>
+        <package android:name="dsa.JuegoMazmorras" />
+    </queries>
+
     <permission
         android:name="com.eetac.proyecto_dsa.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
         android:protectionLevel="signature" />
@@ -50,7 +54,15 @@
         <activity android:name="com.eetac.proyecto_dsa.activities.GruposActivity" />
         <activity android:name="com.eetac.proyecto_dsa.activities.EventosActivity" />
         <activity android:name="com.eetac.proyecto_dsa.activities.UsuariosEventoActivity" />
+        <activity
+            android:name="com.eetac.proyecto_dsa.activities.PreJuegoActivity"
+            android:exported="true"
+            android:launchMode="singleTop" />
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.eetac.proyecto_dsa.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.eetac.proyecto_dsa.androidx-startup"
